@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Digital Clock -->
+    <div class="clock-container">
+        <h1>Digital Clock</h1>
+        <h3 id="digi">00:00:00</h3>
+    </div>
+
+    <script>
+        function updateClock() {
+            const d = new Date();
+            let ee = d.getHours();
+            let ww = d.getMinutes();
+            let rr = d.getSeconds();
+
+            // Format time with leading zeros
+            ee = ee < 10 ? '0' + ee : ee;
+            ww = ww < 10 ? '0' + ww : ww;
+            rr = rr < 10 ? '0' + rr : rr;
+
+            document.getElementById('digi').textContent = `${ee}:${ww}:${rr}`;
+        }
+
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+
+</html>

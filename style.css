@@ -1,0 +1,65 @@
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #00c8ffbd, #cb9ce5da);
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Clock container styling */
+.clock-container {
+    background: rgba(255, 255, 255, 0.929);
+    padding: 40px 60px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading styling */
+h1 {
+    font-size: 2rem;
+    /* text-decoration: underline; */
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, 0.823);
+}
+
+/* Time styling */
+h3 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: rgba(0, 0, 0, 0.86);
+    
+}
+
+
+
+/* Fade-in animation for the clock container */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
